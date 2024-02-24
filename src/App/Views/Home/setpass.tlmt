@@ -1,0 +1,31 @@
+{% extends "layout.tlmt" %}
+{% block title %}Set New Password{% endblock %}
+{% block body %}
+    <div class="w3-row">
+        <div class="w3-third">
+            <div class="w3-container"></div>
+        </div>
+        <div class="w3-third w3-center">
+            <div class="w3-container">
+                <form action="/home/setpassword" method="post">
+                    <input type="hidden" name="id" id="id" value="{{ id }}" />
+                    <input type="hidden" name="username" id="username" value="{{ username }}" />
+                    <input type="hidden" name="app" id="app" value="{{ app }}" />
+                    <input type="hidden" name="dep" id="dep" value="{{ dep }}" />
+                    <input type="hidden" name="rol" id="rol" value="{{ rol }}" />
+                    <label>
+                        <input class="w3-input" type="password" name="password1" id="password1">
+                    </label>
+                    <label>New Password</label>
+                    <label>
+                        <input class="w3-input" type="password" name="password2" id="password2">
+                    </label>
+                    <label>Confirm New Password</label><br />
+                    <input class="w3-button w3-blue w3-round-xxlarge" type="submit" value="Change Password">
+                </form>
+            </div>
+        </div>
+        <div class="w3-third">
+        </div>
+    </div>
+{% endblock %}
